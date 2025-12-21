@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    background: white;
+    color: #1e293b;
+}
+
+nav {
+    background: #E91E8C;
+    color: white;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 15px 24px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav li:hover {
+    color: #fce7f3;
+}
+
+.hero {
+    position: relative;
+    padding: 120px 24px;
+    overflow: hidden;
+    min-height: 80vh;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 1152px;
+    animation: fadeInUp 0.6s forwards;
+    z-index: 10;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 72px);
+    font-weight: bold;
+    color: #E91E8C;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: clamp(18px, 2vw, 24px);
+    max-width: 768px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+.stories-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 96px 24px;
+    background: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.underline {
+    width: 96px;
+    height: 4px;
+    background: #E91E8C;
+    margin: 0 auto;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.story-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.story-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.story-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(233, 30, 140, 0.15);
+    border-color: #E91E8C;
+}
+
+.story-image-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    background: #f1f5f9;
+}
+
+.story-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.story-card:hover .story-image-wrapper img {
+    transform: scale(1.1);
+}
+
+.story-content {
+    padding: 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-line {
+    width: 48px;
+    height: 3px;
+    background: #E91E8C;
+    margin-bottom: 16px;
+}
+
+.story-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.story-preview {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    color: #E91E8C;
+    font-weight: 600;
+    font-size: 16px;
+    transition: gap 0.3s;
+    gap: 8px;
+}
+
+.story-card:hover .read-more {
+    gap: 12px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 64px 24px;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .stories-container {
+        padding: 64px 24px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .story-image-wrapper {
+        height: 220px;
+    }
+
+    .story-content {
+        padding: 24px;
+    }
+
+    .story-name {
+        font-size: 20px;
+    }
+
+    .story-preview {
+        font-size: 15px;
+    }
+}

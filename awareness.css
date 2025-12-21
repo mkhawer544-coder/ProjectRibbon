@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    background: white;
+    color: #1e293b;
+}
+
+nav {
+    background: #E91E8C;
+    color: white;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 15px 24px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+nav li:hover a {
+    color: #fce7f3;
+}
+
+.awareness-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 100px 24px 60px;
+    text-align: center;
+}
+
+.awareness-hero h1 {
+    font-size: clamp(40px, 6vw, 64px);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.awareness-hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.awareness-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.impact-card {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+    padding: 40px;
+    border-radius: 16px;
+    border-left: 6px solid #E91E8C;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.impact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(233, 30, 140, 0.2);
+}
+
+.impact-card h3 {
+    font-size: 28px;
+    color: #E91E8C;
+    margin-bottom: 16px;
+}
+
+.impact-card p {
+    font-size: 17px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.strategies-section {
+    background: #f8fafc;
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+
+.strategies-section h2 {
+    font-size: 36px;
+    color: #1e293b;
+    margin-bottom: 32px;
+}
+
+.strategy-item {
+    margin-bottom: 28px;
+    padding-left: 24px;
+    border-left: 4px solid #E91E8C;
+}
+
+.strategy-item strong {
+    color: #E91E8C;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.strategy-item p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .strategies-section {
+        padding: 40px 24px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+}
