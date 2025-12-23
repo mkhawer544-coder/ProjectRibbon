@@ -35,6 +35,12 @@ nav ul {
     padding: 0;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-wrap: wrap;
@@ -47,12 +53,6 @@ nav ul {
         padding: 6px 8px;
         white-space: nowrap;
     }
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
 }
 
 nav li {
@@ -343,3 +343,4 @@ nav li:hover {
     line-height: 1.7;
 
 }
+
