@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     background: white;
     color: #1e293b;
+    overflow-x: hidden;
 }
 
 nav {
@@ -38,6 +39,20 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+        white-space: nowrap;
+    }
 }
 
 nav li {
@@ -286,4 +301,5 @@ nav li:hover {
     .story-image-container {
         height: 18rem;
     }
+
 }
